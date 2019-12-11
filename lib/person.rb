@@ -81,6 +81,8 @@ end
 
 amia = Person.new("Amia")
 john_louis = Person.new("John Louis")
+amia.happy?
+john_louis.happy?
 
 
 # binding.pry
