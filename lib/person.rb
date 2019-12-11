@@ -7,13 +7,22 @@ class Person
     # eight hygiene points -make attr_accessors
     # $25 in their bank accounts- make attr_accessor
     attr_accessor :happiness, :hygiene, :bank_account
+    @@all = []
+
     def initialize(name, happiness = 8 , hygiene = 8, bank_account = 25)
+
         @name = name 
         @hygiene = hygiene
         @bank_account = bank_account
         @happiness = happiness
-        
+        @@all << self
     end
+
+    def self.all 
+
+        return @@all 
+    end 
+
     def happiness=(new_happy)
         if new_happy > 10
             @happiness = 10
@@ -72,11 +81,34 @@ class Person
         self.happiness += 3
         friend.happiness += 3
 
+        Person.all.each do |person|
+            
+            "Hi #{friend.name}! It's #{self.name}. How are you?"
+        end 
 
-
+        return "Hi #{friend.name}! It's #{self.name}. How are you?"
     end
 
+    def start_conversation(name, topic)
+
+        if topic == "politics"
+
+            self.happiness -= 2 
+            name.happiness -= 2 
+            return "blah blah partisan blah lobbyist"
+        elsif topic == "weather"
+            
+            self.happiness += 1 
+            name.happiness += 1 
+            return "blah blah sun blah rain"
+        else 
+            return "blah blah blah blah blah"
+        end 
+
+    end 
+
 end
+
 
 
 amia = Person.new("Amia")
