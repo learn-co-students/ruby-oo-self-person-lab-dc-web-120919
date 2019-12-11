@@ -46,6 +46,11 @@ class Person
             return false
         end
     end
+
+    def get_paid(salary)
+        
+        puts "all about the benjamins"
+    end
     
     
 end# your code goes here
