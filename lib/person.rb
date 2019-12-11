@@ -71,7 +71,7 @@ class Person
     def call_friend(friend = "friend")
         self.happiness += 3
         friend.happiness += 3
-        
+
 
 
     end
@@ -81,5 +81,6 @@ end
 
 amia = Person.new("Amia")
 john_louis = Person.new("John Louis")
+
 
 # binding.pry
