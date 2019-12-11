@@ -69,9 +69,11 @@ class Person
         friend.happiness += 3
         Person.all.each do |person|
             "Hi #{friend.name}! It's #{self.name}. How are you?"
+            binding.pry
         end
         return "Hi #{friend.name}! It's #{self.name}. How are you?"
     end
+
     def start_conversation(name, topic)
         if topic == "politics"
             self.happiness -= 2
@@ -88,3 +90,7 @@ class Person
 end
 amia = Person.new("Amia")
 john_louis = Person.new("John Louis")
+
+amia.happy?
+amia.clean?
+
