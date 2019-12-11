@@ -31,16 +31,21 @@ class Person
         end
     end
 
-    # def happy?
-    
-    # end
+    def happy?
+        if @happiness > 7
+         return true
+        else
+         return false
+        end
+    end
 
-    # def clean?
-    #     if @hygiene > 7
-    #         puts "true"
-    #     else "false"
-    #     end
-    # end
+    def clean?
+        if @hygiene > 7
+            return true
+        else 
+            return false
+        end
+    end
     
     
 end# your code goes here
